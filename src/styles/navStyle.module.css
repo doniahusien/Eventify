@@ -1,0 +1,8 @@
+.nav{
+    background-color:F8F8F8;
+}
+/* navStyle.module.css */
+.hover\:text-custom-hover-hover:hover {
+    color: var(--color-custom-hover);
+  }
+  

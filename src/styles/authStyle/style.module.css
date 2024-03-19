@@ -1,0 +1,20 @@
+.inputForm{
+    background-color:#D9D9D9;
+    border:2px solid black;
+    width: 340px;
+    border: none;
+    outline:none;
+    padding: 5px 15px;
+    border-radius: 8px;
+}
+.buttonForm{
+    width: 270px;
+    background-color: #212861;
+    color: #D9D9D9;
+    padding: 5px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.avater{
+    color: #1A2FD6;
+}

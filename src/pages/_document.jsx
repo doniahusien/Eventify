@@ -4,6 +4,10 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
+      <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap"
+          />
       <body>
         <Main />
         <NextScript />
