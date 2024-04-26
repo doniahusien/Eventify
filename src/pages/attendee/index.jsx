@@ -1,30 +1,52 @@
 import React from 'react';
+import EventPost from '@/components/UI_shared/EventPost';
+import Dashboard from '@/components/shared/Dashboard';
 
-const Index = () => {
+const Index = ({ events }) => {
+  const eventData = [
+    {
+      author: {
+        name: 'Donia Hussien',
+        image: '/images/profile.svg',
+      },
+      content: 'Discover the best things to do & events in Cairo. explore concerts, meetups, open mics, art shows, music events and a lot more.',
+      imageUrl: '/images/eventone.png',
+      icons: ['/icons/heart2.svg', '/icons/star2.svg', '/icons/chat2.svg'],
+    },
+    {
+      author: {
+        name: 'Donia Hussien',
+        image: '/images/profile.svg',
+      },
+      content: 'Discover the best things to do & events in Cairo. explore concerts, meetups, open mics, art shows, music events and a lot more.',
+      imageUrl: '/images/eventone.png',
+      icons: ['/icons/heart2.svg', '/icons/star2.svg', '/icons/chat2.svg'],
+    },
+  ];
+
   return (
-    <div className="flex">
-      {/* Left Dashboard */}
-      <div className="w-1/4 bg-gray-200 p-4">
-        <ul>
-          <li className="mb-2"><a href="#" className="text-blue-500 hover:underline">Dashboard Link 1</a></li>
-          <li className="mb-2"><a href="#" className="text-blue-500 hover:underline">Dashboard Link 2</a></li>
-          <li className="mb-2"><a href="#" className="text-blue-500 hover:underline">Dashboard Link 3</a></li>
-        </ul>
+    <div className="flex w-96">
+      <div className=" bg-gray-200 flex p-5">
+        <Dashboard />
       </div>
-
-      {/* Main Content (Posts) */}
-      <div className="w-3/4 p-4">
-        <h1 className="text-2xl font-bold mb-4">Posts</h1>
-       
-        <div className="post">
-          <h2 className="text-xl font-semibold mb-2">Post Title</h2>
-          <p className="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non feugiat massa, id consequat nisi.</p>
-          <a href="#" className="text-blue-500 hover:underline">Read more</a>
+      <div className='w-full pb-10'>
+        <div className='events flex flex-col gap-10 justify-center items-center'>
+          {eventData.map((event, index) => (
+            <EventPost key={index} {...event} />
+          ))}
         </div>
-     
       </div>
     </div>
   );
 };
 
 export default Index;
+
+
+
+export function getStaticProps() {
+  return fetch('http://localhost:3000/api/events')
+    .then(res => res.json())
+    .then(events => ({ props: { events } }))
+    .catch(error => ({ props: { events: [], message: error.message } }))
+}

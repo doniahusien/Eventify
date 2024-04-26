@@ -6,7 +6,7 @@ import Image from 'next/image'
 const UserNav = () => {
     return (
         <>
-            <div className='flex flex-row justify-around items-center px-10 py-10'>
+            <div className='flex flex-row justify-around items-center px-10 pt-7 pb-4'>
                 <TextLogo />
                 <input type="search" name="search" id="" placeholder='search for Events' style={{background:"#E8E8E8",borderRadius:"10px",width:"450px",padding:"5px 15px"}}/>
                 <div className='flex flex-row space-x-5 items-center'>
