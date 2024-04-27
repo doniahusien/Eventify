@@ -29,11 +29,11 @@ const eventInfo = () => {
 
             <div className='details py-5 flex flex-col gap-5 justify-center text-start px-5'>
               <h1 className='font-bold text-xl'>Startup Development Idea</h1>
-              <p>You are free to download any HTML and CSS from template website. you can use any template for bussiness purposes.</p>
+              <p>You are free to download any HTML and CSalt='img'S from template website. you can use any template for bussiness purposes.</p>
 
               <div className='more flex flex-row justify-between items-center'>
                 <div className='flex flex-row items-center gap-2'>
-                  <Image src={profile} width={35} height={35} />
+                  <Image src={profile} width={35} height={35} alt='img' />
                   <div className='flex flex-col'>
                     <h6>Donia Hussien</h6>
                     <p>Founder</p>
@@ -41,7 +41,7 @@ const eventInfo = () => {
                 </div>
 
                 <div className='flex flex-row gap-3 '>
-                  <Image src={GPSIcon} width={18} height={18}  alt='img' />
+                  <Image src={GPSIcon} width={18} height={18}   />
                   <p> 10:00-10:54 Am</p>
                 </div>
                 <div className='flex flex-row gap-3'>

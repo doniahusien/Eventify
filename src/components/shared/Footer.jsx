@@ -87,7 +87,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="copyRight text-white">
-                <h4>CopyRight @ 2024</h4>
+                <h4>CopyRight 2024</h4>
             </div>
         </footer>
     );
