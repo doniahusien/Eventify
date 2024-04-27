@@ -19,7 +19,7 @@ const Dashboard = () => {
                 {links.map((link, index) => (
                     <li className="mb-2 flex flex-col justify-center items-center" key={index}>
                     <Link href={link.url} className=" hover:text-custom-hover mb-2 flex flex-col justify-center items-center">
-                        <Image src={link.icon} alt="image" width={30} height={25} />
+                        <Image  alt='img'  src={link.icon}  width={30} height={25} />
                             <span>{link.name}</span>
                     </Link>
                 </li>

@@ -24,7 +24,7 @@ const eventInfo = () => {
 
           <div className='new  flex flex-row justify-center items-center bg-slate-600 w-3/4' style={{ background: '#F0F0F0' }}>
             <div className='h-50'>
-              <Image src={img} width={500} height={400} />
+              <Image src={img} width={500} height={400}  alt='img'  />
             </div>
 
             <div className='details py-5 flex flex-col gap-5 justify-center text-start px-5'>
@@ -41,11 +41,11 @@ const eventInfo = () => {
                 </div>
 
                 <div className='flex flex-row gap-3 '>
-                  <Image src={GPSIcon} width={18} height={18} />
+                  <Image src={GPSIcon} width={18} height={18}  alt='img' />
                   <p> 10:00-10:54 Am</p>
                 </div>
                 <div className='flex flex-row gap-3'>
-                  <Image src={clockIcon} width={20} height={20} />
+                  <Image src={clockIcon} width={20} height={20}  alt='img' />
                   <p> 10:00-10:54 Am</p>
                 </div>
               </div>
@@ -53,7 +53,7 @@ const eventInfo = () => {
           </div>
           <div className='new  flex flex-row justify-center items-center bg-slate-600 w-3/4' style={{ background: '#F0F0F0' }}>
             <div className='h-50'>
-              <Image src={img} width={500} height={400} />
+              <Image src={img} width={500} height={400} alt='img'  />
             </div>
 
             <div className='details py-5 flex flex-col gap-5 justify-center text-start px-5'>
@@ -62,7 +62,7 @@ const eventInfo = () => {
 
               <div className='more flex flex-row justify-between items-center'>
                 <div className='flex flex-row items-center gap-2'>
-                  <Image src={profile} width={35} height={35} />
+                  <Image src={profile} width={35} height={35}  alt='img'  />
                   <div className='flex flex-col'>
                     <h6>Donia Hussien</h6>
                     <p>Founder</p>
@@ -70,11 +70,11 @@ const eventInfo = () => {
                 </div>
 
                 <div className='flex flex-row gap-3 '>
-                  <Image src={GPSIcon} width={18} height={18} />
+                  <Image src={GPSIcon} width={18} height={18}  alt='img'  />
                   <p> 10:00-10:54 Am</p>
                 </div>
                 <div className='flex flex-row gap-3'>
-                  <Image src={clockIcon} width={20} height={20} />
+                  <Image src={clockIcon} width={20} height={20}  alt='img'  />
                   <p> 10:00-10:54 Am</p>
                 </div>
               </div>
@@ -82,7 +82,7 @@ const eventInfo = () => {
           </div>
           <div className='new  flex flex-row justify-center items-center bg-slate-600 w-3/4' style={{ background: '#F0F0F0' }}>
             <div className='h-50'>
-              <Image src={img} width={500} height={400} />
+              <Image src={img} width={500} height={400}  alt='img'  />
             </div>
 
             <div className='details py-5 flex flex-col gap-5 justify-center text-start px-5'>
@@ -91,7 +91,7 @@ const eventInfo = () => {
 
               <div className='more flex flex-row justify-between items-center'>
                 <div className='flex flex-row items-center gap-2'>
-                  <Image src={profile} width={35} height={35} />
+                  <Image src={profile} width={35} height={35}  alt='img'  />
                   <div className='flex flex-col'>
                     <h6>Donia Hussien</h6>
                     <p>Founder</p>
@@ -99,11 +99,11 @@ const eventInfo = () => {
                 </div>
 
                 <div className='flex flex-row gap-3 '>
-                  <Image src={GPSIcon} width={18} height={18} />
+                  <Image src={GPSIcon} width={18} height={18}  alt='img'  />
                   <p> 10:00-10:54 Am</p>
                 </div>
                 <div className='flex flex-row gap-3'>
-                  <Image src={clockIcon} width={20} height={20} />
+                  <Image src={clockIcon} width={20} height={20}  alt='img'  />
                   <p> 10:00-10:54 Am</p>
                 </div>
               </div>
@@ -111,7 +111,7 @@ const eventInfo = () => {
           </div>
           <div className='new  flex flex-row justify-center items-center bg-slate-600 w-3/4' style={{ background: '#F0F0F0' }}>
             <div className='h-50'>
-              <Image src={img} width={500} height={400} />
+              <Image src={img} width={500} height={400}  alt='img'  />
             </div>
 
             <div className='details py-5 flex flex-col gap-5 justify-center text-start px-5'>
@@ -120,7 +120,7 @@ const eventInfo = () => {
 
               <div className='more flex flex-row justify-between items-center'>
                 <div className='flex flex-row items-center gap-2'>
-                  <Image src={profile} width={35} height={35} />
+                  <Image src={profile} width={35} height={35}  alt='img'  />
                   <div className='flex flex-col'>
                     <h6>Donia Hussien</h6>
                     <p>Founder</p>
@@ -128,11 +128,11 @@ const eventInfo = () => {
                 </div>
 
                 <div className='flex flex-row gap-3 '>
-                  <Image src={GPSIcon} width={18} height={18} />
+                  <Image src={GPSIcon} width={18} height={18}  alt='img'  />
                   <p> 10:00-10:54 Am</p>
                 </div>
                 <div className='flex flex-row gap-3'>
-                  <Image src={clockIcon} width={20} height={20} />
+                  <Image src={clockIcon} width={20} height={20}   alt='img' />
                   <p> 10:00-10:54 Am</p>
                 </div>
               </div>
@@ -140,7 +140,7 @@ const eventInfo = () => {
           </div>
           <div className='new  flex flex-row justify-center items-center bg-slate-600 w-3/4' style={{ background: '#F0F0F0' }}>
             <div className='h-50'>
-              <Image src={img} width={500} height={400} />
+              <Image src={img} width={500} height={400}  alt='img'  />
             </div>
 
             <div className='details py-5 flex flex-col gap-5 justify-center text-start px-5'>
@@ -149,7 +149,7 @@ const eventInfo = () => {
 
               <div className='more flex flex-row justify-between items-center'>
                 <div className='flex flex-row items-center gap-2'>
-                  <Image src={profile} width={35} height={35} />
+                  <Image src={profile} width={35} height={35}  alt='img'  />
                   <div className='flex flex-col'>
                     <h6>Donia Hussien</h6>
                     <p>Founder</p>
@@ -157,11 +157,11 @@ const eventInfo = () => {
                 </div>
 
                 <div className='flex flex-row gap-3 '>
-                  <Image src={GPSIcon} width={18} height={18} />
+                  <Image src={GPSIcon} width={18} height={18}  alt='img'  />
                   <p> 10:00-10:54 Am</p>
                 </div>
                 <div className='flex flex-row gap-3'>
-                  <Image src={clockIcon} width={20} height={20} />
+                  <Image src={clockIcon} width={20} height={20}  alt='img'  />
                   <p> 10:00-10:54 Am</p>
                 </div>
               </div>

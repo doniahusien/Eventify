@@ -5,7 +5,7 @@ const FormImage = ({imgURL}) => {
     return (
         <>
             <div>
-            <Image src={imgURL} alt="image" width={500} height={300}/>
+            <Image alt='img' src={imgURL} width={500} height={300}/>
             </div>
         </>
     )

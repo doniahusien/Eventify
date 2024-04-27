@@ -7,7 +7,7 @@ const RecentActivity = ({ authorName, imageSrc, activityText }) => {
         <>
             <div className='flex flex-row gap-8 justify-center'>
                 <div>
-                    <Image src={imageSrc} alt="Author" width={75} height={75} />
+                    <Image src={imageSrc}  width={75} height={75}  alt='img' />
                 </div>
                 <div className='flex flex-col'>
                     <h1 className='text-xl font-semibold'>{authorName}</h1>

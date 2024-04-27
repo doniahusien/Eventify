@@ -29,7 +29,7 @@ const ContactInfo = () => {
                 <ul className='flex flex-col justify-center align center space-y-10'>
                     {dataInfo.map((item, index) => (
                         <li key={index} className='flex flex-row gap-5 '>
-                            <Image src={item.icon} width={20} height={20} />
+                            <Image  alt='img'  src={item.icon} width={20} height={20} />
                             <p>{item.desc}</p>
                         </li>
                     ))}

@@ -1,23 +1,24 @@
-// Login.jsx
-import { useRouter } from 'next/router'; // Import useRouter hook
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import FormInputs from '@/components/auth/FormInputs';
 import FormImage from '@/components/auth/FormImage';
 import FormButtons from '@/components/auth/FormButtons';
 import Link from 'next/link';
 import imgURL from '../../../public/images/authsignin.png';
 import TextLogo from '@/components/shared/TextLogo';
+import { connect } from 'react-redux';
+import { loginSuccess, loginFailure } from '../../redux/actions';
 
-const Login = () => {
+const Login = ({ onLoginSuccess, onLoginFailure }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loginError, setLoginError] = useState(null);
-  const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [users, setUsers] = useState([]);
   const router = useRouter();
+
   useEffect(() => {
-    // Fetch user data from API when the component mounts
     fetch('/api/logIn')
       .then(response => {
         if (!response.ok) {
@@ -36,30 +37,31 @@ const Login = () => {
       });
   }, []);
 
+  const validateEmailFormat = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Wait until users data is loaded from the API
     if (loading) {
       console.log('Waiting for data to load...');
       return;
     }
 
-    // Trim whitespace from input email and password
     const trimmedEmail = email.trim();
     const trimmedPassword = password.trim();
 
-    // Validate input fields
     if (!trimmedEmail || !trimmedPassword) {
-      console.log('Please enter email and password');
       setLoginError('Please enter email and password');
       return;
     }
 
-    // Find the user with the entered email and password (case-insensitive comparison)
-    console.log('Users:', users);
-    console.log('Input email:', trimmedEmail);
-    console.log('Input password:', trimmedPassword);
+    if (!validateEmailFormat(trimmedEmail)) {
+      setLoginError('Please enter a valid email address');
+      return;
+    }
 
     const user = users.find(user =>
       user.email.trim().toLowerCase() === trimmedEmail.toLowerCase() &&
@@ -68,12 +70,13 @@ const Login = () => {
 
     if (user) {
       console.log('Login successful:', user);
+      onLoginSuccess(user);
       switch (user.type_id) {
         case 4:
           router.push('/attendee');
           break;
         case 2:
-          router.push('/sponser');
+          router.push('/sponsor');
           break;
         default:
           console.log('Invalid user type');
@@ -81,6 +84,7 @@ const Login = () => {
     } else {
       console.log('Invalid email or password');
       setLoginError('Invalid email or password');
+      onLoginFailure('Invalid email or password');
     }
   };
 
@@ -118,4 +122,9 @@ const Login = () => {
   );
 };
 
-export default Login;
+const mapDispatchToProps = (dispatch) => ({
+  onLoginSuccess: (userData) => dispatch(loginSuccess(userData)),
+  onLoginFailure: (errorMessage) => dispatch(loginFailure(errorMessage)),
+});
+
+export default connect(null, mapDispatchToProps)(Login);

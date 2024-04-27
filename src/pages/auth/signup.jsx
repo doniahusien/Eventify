@@ -1,5 +1,5 @@
 import React from 'react'
-import imgURL from '../../public/images/authsignup.png';
+import imgURL from '../../../public/images/authsignup.png';
 import FormButtons from '@/components/auth/FormButtons';
 import FormImage from '@/components/auth/FormImage';
 import FormInputs from '@/components/auth/FormInputs';

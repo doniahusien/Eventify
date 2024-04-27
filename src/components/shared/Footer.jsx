@@ -52,7 +52,6 @@ const Footer = () => {
             <div className="w-full">
                 <div className="footer flex justify-around items-center py-5 max-w-screen-xl mx-auto">
                     <div className="left w-1/2">
-                        {/* Use TextLogo component */}
                         <TextLogo isFooter={isFooter} />
 
                         <div className="links">
@@ -60,7 +59,7 @@ const Footer = () => {
                                 {links.map((link, index) => (
                                     <li key={index} className=' flex flex-row items-center py-5'>
                                         <span>
-                                            <Image src={link.icon} alt={link.name} width={18} height={18} />
+                                            <Image  alt='img'  src={link.icon} width={18} height={18} />
                                         </span>
                                         <Link key={index} href={link.url} className="mr-8 px-2 text-white ">
                                             {link.name}
@@ -80,7 +79,7 @@ const Footer = () => {
                         <div className="social">
                             <ul className=' flex flex-row items-center gap-5'>
                                 {logos.map((logo, index) => (
-                                    <li key={index}><Image src={logo.icon} width={25} height={24} /></li>
+                                    <li key={index}><Image  alt='img'  src={logo.icon} width={25} height={24} /></li>
                                 ))}
                             </ul>
                         </div>

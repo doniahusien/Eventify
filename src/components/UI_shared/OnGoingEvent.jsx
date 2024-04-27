@@ -7,7 +7,7 @@ const OnGoingEvent = () => {
             <div style={{width:"250px"}}>
                 <div className='flex flex-col gap-5 shadow-xl p-5 '>
                 <div>
-                    <Image src={img} width={350} height={450}/>
+                    <Image src={img} width={350} height={450}  alt='img' />
                 </div>
                 <h1>National seminar</h1>
                 <h4>19 December 2024</h4>

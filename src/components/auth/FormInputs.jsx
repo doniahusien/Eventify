@@ -5,7 +5,6 @@ import style from '../../styles/authStyle/style.module.css';
 
 const FormInputs = ({ label, type, value, onChange }) => {
   const handleChange = (event) => {
-    // Call the onChange function passed from the parent component
     onChange(event.target.value);
   };
 
